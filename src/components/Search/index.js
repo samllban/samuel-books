@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Input from '../Input';
+import { useState } from "react";
+
 
 const SearchContainer = styled.section`
         background-image: linear-gradient(90deg, #002F52 35%, #326589 165%);
@@ -24,13 +26,17 @@ const SubTitulo = styled.h3`
 `
 
 function Search() {
+    const [textoDigitado, setTextoDigitado] = useState('');
+
     return (
         <SearchContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
             <SubTitulo>Encontre seu livro em nossa estante.</SubTitulo>
             <Input
                 placeholder="Escreva sua próxima leitura"
+                onBlur={evento => setTextoDigitado(evento.target.value)}
             />
+            <p>{textoDigitado}</p>
         </SearchContainer>
     )
 }
