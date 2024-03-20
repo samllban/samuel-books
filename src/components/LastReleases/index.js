@@ -1,6 +1,8 @@
 import { livros } from './dateLatsReleases';
 import styled from 'styled-components';
 import { Titulo } from '../Titulo';
+import CardRecomenda from '../CardRecomenda';
+import imgLivro from '../../img/livro2.png';
 
 const DateLastReleasesContainer = styled.section`
     background-color: #EBECEE;
@@ -22,7 +24,7 @@ function LastReleases() {
         <DateLastReleasesContainer>
             <Titulo
                 cor="EB9B00"
-                tamanhoFonte = "36px"
+                tamanhoFonte="36px"
             >
                 ÚLTIMOS LANÇAMENTOS
             </Titulo>
@@ -31,6 +33,12 @@ function LastReleases() {
                     <img src={livro.src} />
                 ))}
             </NewBooksContainer>
+            <CardRecomenda
+                titulo="Talvez você se interesse por"
+                subtitulo="Angular 11"
+                descricao="Construindo uma aplicação com a plataforma Google"
+                img={imgLivro}
+            />
         </DateLastReleasesContainer>
     )
 }
