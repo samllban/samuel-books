@@ -1,21 +1,12 @@
 import { livros } from './dateLatsReleases';
 import styled from 'styled-components';
+import { Titulo } from '../Titulo';
 
 const DateLastReleasesContainer = styled.section`
     background-color: #EBECEE;
     padding-bottom: 20px;
     flex-direction: column;
     display: flex;
-`
-
-const Titulo = styled.h2`
-    width: 100%;
-    padding: 30px 0;
-    background-color: #fff;
-    color: #eb9b00;
-    font-size: 36px;
-    text-align: center;
-    margin: 0;
 `
 
 const NewBooksContainer = styled.div`
@@ -29,7 +20,12 @@ const NewBooksContainer = styled.div`
 function LastReleases() {
     return (
         <DateLastReleasesContainer>
-            <Titulo>ULTIMOS LANÇAMENTOS</Titulo>
+            <Titulo
+                cor="EB9B00"
+                tamanhoFonte = "36px"
+            >
+                ÚLTIMOS LANÇAMENTOS
+            </Titulo>
             <NewBooksContainer>
                 {livros.map(livro => (
                     <img src={livro.src} />
