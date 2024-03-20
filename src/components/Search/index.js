@@ -23,7 +23,9 @@ const SubTitulo = styled.h3`
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 40px; 
+
 `
+
 const Resultado = styled.div`
     display: flex;
     justify-content: center;
@@ -45,7 +47,6 @@ const Resultado = styled.div`
     }
 
 `
-
 
 function Search() {
     const [livrosPesquisados, setLivrosPesquisado] = useState([]);
